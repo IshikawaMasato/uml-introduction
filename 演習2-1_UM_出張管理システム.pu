@@ -1,4 +1,4 @@
-@startuml
+@startuml 演習２－１
 left to right direction
 actor 申請者
 actor 承認者
