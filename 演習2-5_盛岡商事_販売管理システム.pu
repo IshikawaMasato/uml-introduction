@@ -1,0 +1,9 @@
+@startuml 演習2-5
+actor 出荷担当者
+rectangle 販売管理システム{
+    usecase 商品を確認する
+    usecase 商品を登録する
+}
+出荷担当者 -->商品を確認する
+出荷担当者 -->商品を登録する
+@enduml
