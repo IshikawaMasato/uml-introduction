@@ -1,5 +1,6 @@
 @startuml 図３－１
 skinparam classAttributeIconSize 0
+hide Employee circle
 ' class A <<stereotype>>{
 ' }
 ' class B <<stereotype>>{
