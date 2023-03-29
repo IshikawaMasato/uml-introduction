@@ -1,4 +1,4 @@
-@startuml
+@startuml 図３－３
 class 社員{
 - 社員ID
 - 社員名
