@@ -1,4 +1,4 @@
-@startuml
+@startuml 図３－５
 ' left to right direction
 class "空車リスト" as empty_car {
 - 日付: Date
