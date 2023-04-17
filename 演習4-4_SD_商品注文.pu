@@ -1,0 +1,25 @@
+@startuml 図４－４
+hide footbox
+actor ":受注係" as admin
+participant ":注文登録画面" as register <<boundary>>
+participant ":商品" as commodity <<entity>>
+participant ":注文" as order <<entity>>
+activate admin
+activate register
+activate commodity
+admin -> register: 商品情報確認()
+register -> commodity: 商品情報取得()
+commodity -->> register: 商品情報
+deactivate commodity
+register -> register: 商品情報表示(商品情報)
+activate register
+deactivate register
+deactivate register
+admin -> register: 商品登録(商品情報)
+activate register
+create order
+register --> order: 生成する()<<create>>
+activate order
+deactivate order
+deactivate admin
+@enduml
