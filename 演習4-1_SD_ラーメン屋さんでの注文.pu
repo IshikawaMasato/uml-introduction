@@ -1,0 +1,18 @@
+@startuml 演習４－１
+hide footbox
+actor 客 as customer
+participant ":フロア店員" as employee
+participant ":料理人" as cook
+mainframe sd ラーメン屋さん
+activate customer
+customer -> employee :ラーメンを注文する()
+activate employee
+employee -> cook :調理を指示する()
+activate cook
+cook -> cook :調理をする()
+cook --> employee :ラーメン
+deactivate cook
+employee --> customer :ラーメン
+deactivate employee
+deactivate customer
+@enduml
