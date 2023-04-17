@@ -1,0 +1,26 @@
+@startuml 図４－５
+hide footbox
+actor 会員 as member 
+participant "：商品検索画面" as search <<boundary>>
+participant "：商品検索コントローラ" as controller <<control>>
+participant "：商品" as commodity <<entity>>
+participant "：商品カテゴリ" as category <<entity>>
+activate member
+member -> search :商品検索（商品番号）
+activate search
+search -> controller :商品検索（商品番号）
+activate controller
+create commodity
+controller -->> commodity :<<create>>生成（）
+loop 商品カテゴリ
+create category
+controller -->> category :<<create>>生成（） 
+controller -> commodity :商品カテゴリ設定
+activate commodity
+deactivate commodity
+end loop
+search <-- controller :商品情報
+deactivate controller
+search -> search :商品情報開示（商品情報）
+activate search
+@enduml
