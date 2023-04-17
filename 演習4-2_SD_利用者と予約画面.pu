@@ -1,0 +1,13 @@
+@startuml 演習４－２
+hide footbox
+actor user
+participant ":予約画面" as reserve
+activate user
+user -> reserve :ログインメッセージを送信する()
+activate reserve
+reserve -> reserve :認証をする()
+activate reserve
+deactivate reserve
+deactivate reserve
+deactivate user
+@enduml
