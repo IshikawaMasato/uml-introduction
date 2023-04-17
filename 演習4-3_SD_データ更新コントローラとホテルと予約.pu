@@ -1,0 +1,15 @@
+@startuml 演習４－３
+hide footbox
+participant ":データ更新コントローラクラス" as update <<controller>>
+participant ":ホテル" as hotel <<hotel>>
+participant ":予約" as reserve
+activate update
+update -> hotel :予約する()
+activate hotel
+hotel -> reserve :<<create>>
+hotel -> hotel :予約登録操作()
+activate hotel
+deactivate hotel
+deactivate hotel
+deactivate update
+@enduml
