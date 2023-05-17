@@ -1,0 +1,22 @@
+@startuml 演習６－３
+left to right direction
+actor 患者
+actor 看護師
+rectangle 診察予約システム {
+usecase 予約の登録
+usecase 予約の確認
+usecase 予約の削除
+usecase 予約の順番表示
+usecase 予約の順番変更
+
+}
+患者 --> 予約の登録
+患者 --> 予約の確認
+患者 --> 予約の削除
+患者 --> 予約の順番表示
+
+
+看護師 --> 予約の順番表示
+看護師 --> 予約の順番変更
+
+@enduml
