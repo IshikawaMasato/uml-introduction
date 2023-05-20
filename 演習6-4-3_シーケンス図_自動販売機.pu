@@ -1,0 +1,19 @@
+@startuml 演習６－４
+hide footbox
+actor 客 as a
+participant ":料金装置" as b
+participant ":ボタン" as c
+participant ":ベンダー措置" as d
+activate b
+a --> b :お金を投入する()
+deactivate b
+activate c
+a --> c :ボタンを押す()
+opt お金がある
+activate d
+c --> d :ドリンクを選択する（）
+d --> a :ドリンクを出す()
+end alt
+deactivate d
+deactivate c
+@enduml
