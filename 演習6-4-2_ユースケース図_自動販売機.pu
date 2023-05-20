@@ -1,0 +1,12 @@
+@startuml 演習６－４
+actor 利用者
+actor ベンダー
+rectangle 自動販売機システム {
+    usecase お金を入れる
+    usecase ボタンを押す
+    usecase お金を回収する
+}
+利用者-->お金を入れる
+利用者-->ボタンを押す
+ベンダー-->お金を回収する
+@enduml
