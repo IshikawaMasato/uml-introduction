@@ -1,0 +1,17 @@
+@startuml 演習６－５
+left to right direction
+state 電源SWON{
+    state entry <<entryPoint>>
+    state exit <<exitPoint>>
+    state c <<choice>>
+    entry --> c
+    c --> 右回転 :センサが暗いと判断した場合
+    c --> 左回転 :センサが明るいと判断した場合
+    右回転 --> exit
+    左回転 --> exit 
+}
+[*] -right-> 電源SWOFF
+電源SWOFF --> entry
+exit --> 電源SWOFF
+電源SWOFF -right-> [*]
+@enduml
