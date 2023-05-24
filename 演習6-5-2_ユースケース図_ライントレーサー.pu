@@ -1,0 +1,17 @@
+@startuml 演習６－５
+left to right direction
+actor user
+actor CPU
+package ライントレーサー{
+    usecase 電源を入れる
+    usecase 右モータON
+    usecase 右モータOFF
+    usecase 左モータON
+    usecase 左モータOFF
+}
+user --> 電源を入れる
+CPU --> 右モータON
+CPU --> 右モータOFF
+CPU --> 左モータON
+CPU --> 左モータOFF
+@enduml
